@@ -3,43 +3,78 @@ body {
 }
 
 /* Header */
-header {
-  height: 10%;
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  padding-left: 3%;
+  background-color: #eee;
+  border-bottom: 2px solid #0275d8;
+  transition: 0.5s;
+  border-radius: 0;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 20px;
+}
+
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+ul.breadcrumb li i {
+  padding: 0 30%;
+  font-size: 16px;
+}
+
+.header {
+  height: 80px;
   background: #eb145b;
 }
 
-header img {
+.header img {
   margin: 0 auto;
+  float: left;
   width: 7%;
   margin-left: 10px;
 }
 
-.menu {
-  color: #fff;
-  font-size: 10% !important;
+.header span {
+  float: left;
+  margin-top: 3% !important;
 }
 
-header a {
+.header a {
   float: right;
-  margin-top: 20%;
-  font-size: 150%;
+  margin-top: 14%;
+  font-size: 166%;
   color: #fff;
   font-weight: bold;
 }
 
-header a:hover {
+.header a:hover {
   color: #00C0FF;
   text-decoration: none;
 }
 
 .top-right {
-  float: right;
-  margin-right: 2%;
-  width: 8%;
+  margin-left: 87%;
+  width: 10%;
 }
 
 .top-right .bell {
-  float: left;
+  /* float: left; */
   font-size: 150%;
   color: #fff;
   margin-top: 20%;
@@ -47,7 +82,7 @@ header a:hover {
 }
 
 .top-right .user {
-  float: left;
+  /* float: left; */
   font-size: 150%;
   color: #fff;
   margin-top: 20%;
@@ -67,7 +102,6 @@ header a:hover {
 /* Footer */
 footer {
   float: left;
-  margin: 0 auto;
   height: 8%;
   background: #14a3eb;
 }
@@ -83,12 +117,11 @@ footer strong {
 
 /* Side Menu */
 .left-panel {
-  height: 125%;
+  height: 100%;
   width: 0;
   float: left;
-  margin-left: -2%;
+  margin-left: -1.2%;
   background: #14a3eb;
-  z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -122,16 +155,17 @@ footer strong {
 
 /* content */
 .routh {
-  margin: 0 auto;
   float: left;
-  height: 40%;
-  margin-left: 1%;
+  height: 30%;
+  width: 42%;
+  margin-left: 5%;
   margin-top: 3%;
   transition: 0.5s;
+  z-index: 1000;
 }
 
 .routh2, .routh4 {
-  margin-left: 3%;
+  margin-left: 12%;
 }
 
 .routh3, .routh4 {
@@ -139,31 +173,33 @@ footer strong {
 }
 
 .routh1, .routh3 {
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 .content {
   float: right;
   width: 100%;
+  height: 900px;
   background: #eee;
   background-size: 132% 110%;
 }
 
 .content h2 {
   color: #0088cc;
-  margin-top: 4%;
+  margin-top: 2%;
   text-align: left;
-  padding-left: 4%;
+  padding-left: 3%;
   transition: 0.5s;
 }
 
 .h {
   float: left;
   margin-left: 0;
-  width: 105%;
+  width: 120%;
   background: #fff;
   margin-bottom: 5px;
   box-shadow: 1.5px 1.5px 5px 1px #aaa;
+  z-index: 1000;
 }
 
 .h label {
@@ -193,10 +229,11 @@ footer strong {
 .map {
   background-size: 100%;
   margin-left: 0px;
-  margin-top: 15%;
-  height: 85%;
-  width: 105%;
+  margin-top: 10%;
+  height: 200px;
+  width: 120%;
   box-shadow: 1.5px 1.5px 5px 1px #aaa;
+  z-index: 1000;
 }
 
 .mapouter {
@@ -212,31 +249,20 @@ footer strong {
   width: 100%;
 }
 
-/*responsive*/
-@media screen and (max-width: 750px) {
-  body {
-    margin: 0 auto;
-    width: 750px;
-  }
-
-  header {
-    height: 100px;
-    background: #eb145b;
-  }
-}
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #e6e6e6;
+  background: #aaa;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #003b58;
+  border-radius: 1px;
 }
 
 /* Handle on hover */
